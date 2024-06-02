@@ -1,0 +1,18 @@
+{
+	"TC_Add_New_Customer":{
+
+
+	"userid" :"mngr571354",
+	"password" :"rupumej",
+	"customerName"  :"Jack Sparrow",
+	"address" :"Rajiv Gandhi IT PARK",
+	"city" :"Chandigarh",
+	"state" :"Punjab",
+	"pin" :"160101",
+	"phoneNo" :"987654321",
+	
+	}
+	
+	
+
+}
