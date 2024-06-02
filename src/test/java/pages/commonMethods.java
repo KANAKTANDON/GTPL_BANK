@@ -16,10 +16,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.io.Files;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 public class commonMethods {
 	
  public WebDriver driver;
+  
+	 
 	
 	/*******
 	  CONSTRUCTOR
@@ -32,18 +36,6 @@ public class commonMethods {
 	/*******
 	  CONSTRUCTOR ENDS .........
 	 *******/
-	  
-	  
-	  public String takeScreenShot(String screenShotName) throws Exception { 
-		  File sourcefile =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
-		  File destination = new File ("./Screenshots/"+ screenShotName +".jpg");
-		  Files.copy(sourcefile, destination);
-		  
-		  return destination.getAbsolutePath();
-		  
-	  }
-	  
-	  
 	  
 	  public void waitforPresence(String xpath) {
 		  WebElement element = driver.findElement(By.xpath(xpath));

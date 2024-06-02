@@ -12,6 +12,8 @@ public class newAccount extends commonMethods{
 	
 	public void clickNewAccount() throws Exception {
 		clickByXpath(locator.getClickNewAccountXpath());
+		pageRefresh();
+		clickByXpath(locator.getClickNewAccountXpath());
 		System.out.println("NewAccount button clicked....");
 		
 	}
@@ -41,7 +43,7 @@ public class newAccount extends commonMethods{
 	}
 	public void clickSubmitButton_newAccCreation() throws Exception {
 		highLightText(locator.getSubmitButtonForNewAccCreationXpath());
-		takeScreenShot("newAccountCreation");
+//		takeScreenShot("newAccountCreation");
 		clickByXpath(locator.getSubmitButtonForNewAccCreationXpath());
 		System.out.println("submitButton clicked for new account creation....");
 		Thread.sleep(10000);
@@ -50,7 +52,7 @@ public class newAccount extends commonMethods{
 	public String getAccountNumber() throws Exception {
 		String accountID = getTextValue(locator.getAccountidXpath());
 		highLightText(locator.getAccountidXpath());
-		takeScreenShot("accountID");
+//		takeScreenShot("accountID");
 		System.out.println("account number is: " + accountID);
 		return accountID;
 	}

@@ -39,7 +39,7 @@ public class addNewCustomer extends commonMethods{
 		EnterTextByXpath(locators.dobxpath(), dd);
 		EnterTextByXpath(locators.dobxpath(), mm);
 		EnterTextByXpath(locators.dobxpath(), yyyy);
-		takeScreenShot("date_of_birth");
+		
 	}
 	 public void enterAddress(String address) {
 		 EnterTextByXpath(locators.addressxpath(), address);
@@ -65,13 +65,13 @@ public class addNewCustomer extends commonMethods{
 	 }
 	 public void submitCustomerDetails() throws Exception {
 		 highLightText(locators.submitButton());
-		 takeScreenShot("customerDetails");
+		// takeScreenShot("customerDetails");
 		 clickByXpath(locators.submitButton());
 		 Thread.sleep(5000);
 	 }
 	 
 	 public String getCustomerID() throws Exception {
-		 takeScreenShot("customerID");
+		 //takeScreenShot("customerID");
 		 String customerID= getTextValue(locators.getCustomerID());
 		 System.out.println("customerID is: " + customerID );
 		 return customerID;

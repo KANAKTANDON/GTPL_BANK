@@ -38,7 +38,7 @@ public class loginPage extends commonMethods{
 		EnterTextByXpath(locator.getpasswordxpath() , password);
 //		System.out.println("userID entered: " + userid);
 //		System.out.println("password entered: " + password);
-		takeScreenShot("userID_password");
+		//takeScreenShot("userID_password");
 		
 	}
 	
@@ -46,7 +46,7 @@ public class loginPage extends commonMethods{
 		waitforPresence(locator.getloginbuttonxpath());
 		clickByXpath(locator.getloginbuttonxpath());
 		System.out.println("LoginButton Clicked.....");
-		takeScreenShot("loginButton");
+		//takeScreenShot("loginButton");
 	}
 	
 	public void validateGTPLBANKlogo() {

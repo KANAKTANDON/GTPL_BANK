@@ -3,6 +3,8 @@ package regression_test_cases;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.LogStatus;
+
 import utility.jsonReader;
 
 import pages.addNewCustomer;
@@ -45,36 +47,44 @@ public class LoginTestcases extends baseclass{
 		
 		
 		
+	try {
 		
 		
 		login.enterUserID_and_password(username,password);
+		logInfo("userId passoword entered", "userName_password");
 		login.clickLoginButton();
+		logInfo("login sucessfully", "login sucessfully");
 		nc.clickAddCustomer();
+		logInfo("addNewCustomerForm", "addNewCustomerForm");
 		nc.addCustomerDetails(testData);
 		nc.enterDOB("15", "08", "2000");
 		nc.enterEmail(emailAddress);
 		nc.enterPasswordCustomer(password);
 		
-//		nc.enterCustomerName(customerName);
-//		nc.enterDOB("15", "08", "2000");
-//		nc.enterAddress(address);
-//		nc.enterCity(city);
-//		nc.enterState(state);
-//		nc.enterPIN(pin);
-//		nc.enterMobile(phone);
 		
-		
-		
+		logInfo("newCustomerDetailsEntered", "newCustomerDetailsEntered");
 		nc.submitCustomerDetails();
+		logInfo("CustomerID", "CustomerID");
 		String customerID = nc.getCustomerID();
+		logInfo("CustomerID is: "+customerID, "CustomerID");
 		
-		newacc.clickNewAccount();
+//		newacc.clickNewAccount();
+		logInfo("createAccount", "createAccount");
 		newacc.validateAddNewAccFormText();
 		newacc.enterCustomerID(customerID);
 		newacc.enterInitialDepositAmount(initialDeposit);
 		newacc.clickSubmitButton_newAccCreation();
+		logInfo("AccountID", "AccountID");
 		String accountID = newacc.getAccountNumber();
+		logInfo("AccountID is: "+accountID, "AccountID");
 		newacc.validateCustomerid(customerID);
+		
+	}catch (Exception e) {
+		 test.log(LogStatus.FAIL, "TC_Add_New_Customer_Failure");
+		 test.log(LogStatus.FAIL,test.addScreenCapture(takeScreenShot("failStep")));
+	}
+		
+		
 		
 	}
 	
