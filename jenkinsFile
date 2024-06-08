@@ -17,7 +17,8 @@ pipeline {
         stage('Test') {
             steps {
                 // Run Selenium tests
-                bat 'mvn test'
+                //bat 'mvn test'
+ bat 'mvn test -Dtestng.file=GTPL_BANK/regression.xml'
             }
         }
         // Add more stages as needed (e.g., deploy)
