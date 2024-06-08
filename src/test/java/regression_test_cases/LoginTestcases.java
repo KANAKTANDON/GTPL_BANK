@@ -31,6 +31,7 @@ public class LoginTestcases extends baseclass{
 	
 	@Test(priority=2 , enabled=true)
 	public void TC_Add_New_Customer() throws Exception {
+System.out.println("Starting TC_Add_New_Customer...");
 		
 		   JSONObject testData = jsonReader.getTestData("TC_Add_New_Customer");
 		
