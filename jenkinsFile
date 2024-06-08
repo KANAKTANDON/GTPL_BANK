@@ -12,21 +12,21 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your Selenium project (e.g., compile code)
+                echo "Building the project..."
                 bat 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
-                echo "Testing project..."
-                // Run Selenium tests
-                // bat 'mvn test'
-                bat 'mvn test -Dtestng.file=GTPL_BANK/regression.xml'
+                echo "Running tests..."
+                // Run Selenium tests using the specified TestNG XML file
+                bat 'mvn test -DsuiteXmlFile=GTPL_BANK/regression.xml'
             }
         }
         stage('Deploy') {
             steps {
-                echo "Deploying the project...."
-                // Add deployment steps here
+                echo "Deploying the project..."
+                // Add your deployment steps here
             }
         }
     }
