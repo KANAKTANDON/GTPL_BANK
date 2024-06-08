@@ -11,13 +11,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your Selenium project (e.g., compile code)
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
                 // Run Selenium tests
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         // Add more stages as needed (e.g., deploy)
