@@ -68,7 +68,7 @@ public class LoginTestcases extends baseclass{
 		String customerID = nc.getCustomerID();
 		logInfo("CustomerID is: "+customerID, "CustomerID");
 		
-//		newacc.clickNewAccount();
+		newacc.clickNewAccount();
 		logInfo("createAccount", "createAccount");
 		newacc.validateAddNewAccFormText();
 		newacc.enterCustomerID(customerID);

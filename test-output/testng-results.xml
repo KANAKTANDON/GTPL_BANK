@@ -2,24 +2,24 @@
 <testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-02T17:56:45 IST" name="Default suite" finished-at="2024-06-02T17:58:11 IST" duration-ms="86557">
+  <suite started-at="2024-06-08T14:57:05 IST" name="Suite" finished-at="2024-06-08T14:58:19 IST" duration-ms="74547">
     <groups>
     </groups>
-    <test started-at="2024-06-02T17:56:45 IST" name="Default test" finished-at="2024-06-02T17:58:11 IST" duration-ms="86557">
+    <test started-at="2024-06-08T14:57:05 IST" name="Test" finished-at="2024-06-08T14:58:19 IST" duration-ms="74547">
       <class name="regression_test_cases.LoginTestcases">
-        <test-method is-config="true" signature="setup()[pri:0, instance:regression_test_cases.LoginTestcases@47af7f3d]" started-at="2024-06-02T17:56:45 IST" name="setup" finished-at="2024-06-02T17:57:09 IST" duration-ms="24485" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:regression_test_cases.LoginTestcases@47af7f3d]" started-at="2024-06-08T14:57:05 IST" name="setup" finished-at="2024-06-08T14:57:26 IST" duration-ms="20951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TC_Add_New_Customer()[pri:2, instance:regression_test_cases.LoginTestcases@47af7f3d]" started-at="2024-06-02T17:57:09 IST" name="TC_Add_New_Customer" finished-at="2024-06-02T17:58:00 IST" duration-ms="50921" status="PASS">
+        <test-method signature="TC_Add_New_Customer()[pri:2, instance:regression_test_cases.LoginTestcases@47af7f3d]" started-at="2024-06-08T14:57:26 IST" name="TC_Add_New_Customer" finished-at="2024-06-08T14:58:08 IST" duration-ms="42779" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Add_New_Customer -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:regression_test_cases.LoginTestcases@47af7f3d]" started-at="2024-06-02T17:58:00 IST" name="teardown" finished-at="2024-06-02T17:58:11 IST" duration-ms="11077" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:regression_test_cases.LoginTestcases@47af7f3d]" started-at="2024-06-08T14:58:08 IST" name="teardown" finished-at="2024-06-08T14:58:19 IST" duration-ms="10755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- regression_test_cases.LoginTestcases -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
