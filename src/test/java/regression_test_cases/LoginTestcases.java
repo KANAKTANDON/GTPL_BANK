@@ -50,7 +50,7 @@ public class LoginTestcases extends baseclass{
 	try {
 		
 		
-		login.enterUserID_and_password(username,password);
+		//login.enterUserID_and_password(username,password);
 		logInfo("userId passoword entered", "userName_password");
 		login.clickLoginButton();
 		logInfo("login sucessfully", "login sucessfully");
