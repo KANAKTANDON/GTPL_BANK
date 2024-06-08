@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from GitHub
-                    echo "check out project from github......"
+                echo "Checking out project from GitHub..."
                 git 'https://github.com/KANAKTANDON/GTPL_BANK.git'
             }
         }
@@ -17,13 +17,17 @@ pipeline {
         }
         stage('Test') {
             steps {
-                    echo "testing project........"
+                echo "Testing project..."
                 // Run Selenium tests
-                //bat 'mvn test'
- bat 'mvn test -Dtestng.file=GTPL_BANK/regression.xml'
+                // bat 'mvn test'
+                bat 'mvn test -Dtestng.file=GTPL_BANK/regression.xml'
             }
-        }stage('Deploy')
-        echo "deploying the project...."
-        // Add more stages as needed (e.g., deploy)
+        }
+        stage('Deploy') {
+            steps {
+                echo "Deploying the project...."
+                // Add deployment steps here
+            }
+        }
     }
 }
