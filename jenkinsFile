@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo "Running tests..."
                 // Run Selenium tests using the specified TestNG XML file
-                bat 'mvn test -DsuiteXmlFile=GTPL_BANK/regression.xml'
+                bat 'mvn test'
             }
         }
         stage('Deploy') {
