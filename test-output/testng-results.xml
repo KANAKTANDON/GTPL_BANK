@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-17T01:32:39 IST" name="Suite" finished-at="2024-06-17T01:34:11 IST" duration-ms="92390">
+  <suite started-at="2024-06-17T01:54:12 IST" name="Suite" finished-at="2024-06-17T01:55:40 IST" duration-ms="88282">
     <groups>
     </groups>
-    <test started-at="2024-06-17T01:32:39 IST" name="Test" finished-at="2024-06-17T01:34:11 IST" duration-ms="92390">
+    <test started-at="2024-06-17T01:54:12 IST" name="Test" finished-at="2024-06-17T01:55:40 IST" duration-ms="88282">
       <class name="regression_test_cases.LoginTestcases">
-        <test-method is-config="true" signature="setup()[pri:0, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:32:39 IST" name="setup" finished-at="2024-06-17T01:33:00 IST" duration-ms="21200" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:54:12 IST" name="setup" finished-at="2024-06-17T01:54:27 IST" duration-ms="15254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="TC_Login_and_Logout()[pri:1, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:33:00 IST" name="TC_Login_and_Logout" finished-at="2024-06-17T01:33:13 IST" duration-ms="12857" status="PASS">
+        <test-method signature="TC_Login_and_Logout()[pri:1, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:54:27 IST" name="TC_Login_and_Logout" finished-at="2024-06-17T01:54:39 IST" duration-ms="11980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Login_and_Logout -->
-        <test-method signature="TC_Add_New_Customer()[pri:2, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:33:13 IST" name="TC_Add_New_Customer" finished-at="2024-06-17T01:34:00 IST" duration-ms="46865" status="PASS">
+        <test-method signature="TC_Add_New_Customer()[pri:2, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:54:39 IST" name="TC_Add_New_Customer" finished-at="2024-06-17T01:55:29 IST" duration-ms="49590" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Add_New_Customer -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:34:00 IST" name="teardown" finished-at="2024-06-17T01:34:11 IST" duration-ms="11414" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:regression_test_cases.LoginTestcases@694abbdc]" started-at="2024-06-17T01:55:29 IST" name="teardown" finished-at="2024-06-17T01:55:40 IST" duration-ms="11362" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

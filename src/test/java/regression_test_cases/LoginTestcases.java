@@ -42,11 +42,11 @@ public class LoginTestcases extends baseclass{
 	
 	@Test(priority=2 , enabled=true)
 	public void TC_Add_New_Customer() throws Exception {
-<<<<<<< HEAD
+
 		test = reports.startTest("TC_Add_New_Customer");
-=======
+
 System.out.println("Starting TC_Add_New_Customer...");
->>>>>>> 19b51db8ec7ff4c6cee4d09a7ebe61b4fb78f7cb
+
 		
 		   JSONObject testData = jsonReader.getTestData("TC_Add_New_Customer");
 		
