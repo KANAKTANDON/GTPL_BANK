@@ -5,21 +5,29 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the code from GitHub
+                echo "Checking out project from GitHub..."
                 git 'https://github.com/KANAKTANDON/GTPL_BANK.git'
             }
         }
         stage('Build') {
             steps {
                 // Build your Selenium project (e.g., compile code)
+                echo "Building the project..."
                 bat 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
-                // Run Selenium tests
+                echo "Running tests..."
+                // Run Selenium tests using the specified TestNG XML file
                 bat 'mvn test'
             }
         }
-        // Add more stages as needed (e.g., deploy)
+        stage('Deploy') {
+            steps {
+                echo "Deploying the project..."
+                // Add your deployment steps here
+            }
+        }
     }
 }
