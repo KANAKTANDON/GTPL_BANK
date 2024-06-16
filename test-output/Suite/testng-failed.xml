@@ -6,6 +6,7 @@
       <class name="regression_test_cases.LoginTestcases">
         <methods>
           <include name="teardown"/>
+          <include name="TC_Login_and_Logout"/>
           <include name="TC_Add_New_Customer"/>
           <include name="setup"/>
         </methods>

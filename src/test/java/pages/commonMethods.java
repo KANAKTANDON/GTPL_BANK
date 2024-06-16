@@ -40,7 +40,8 @@ public class commonMethods {
 	  public void waitforPresence(String xpath) {
 		  WebElement element = driver.findElement(By.xpath(xpath));
 		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-		  wait.until(ExpectedConditions.visibilityOf(element));
+//		  wait.until(ExpectedConditions.visibilityOf(element));
+		  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
 		  
 	  }
 	

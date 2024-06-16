@@ -40,7 +40,7 @@ public class baseclass {
 		 below code is for extentReports
 		 ***/
 		reports = new ExtentReports(reportPath);
-		test = reports.startTest("bankExtentReport");
+//		test = reports.startTest("bankExtentReport");
 		
 		driver.get("https://demo.guru99.com/V4/index.php");
 		
@@ -57,9 +57,13 @@ public class baseclass {
 		  return destination.getAbsolutePath();
 	}
 	
-	public void logInfo(String info , String screenshotName) throws Exception {
-		test.log(LogStatus.PASS,info,test.addScreenCapture(takeScreenShot(screenshotName)));
-	}
+//	public void logInfo(String info , String screenshotName) throws Exception {
+//		test.log(LogStatus.PASS,info,test.addScreenCapture(takeScreenShot(screenshotName)));
+//	}
+	
+	public void logInfo(ExtentTest test, String info, String screenshotName) throws Exception {
+        test.log(LogStatus.PASS, info, test.addScreenCapture(takeScreenShot(screenshotName)));
+    }
 
 	
 	  

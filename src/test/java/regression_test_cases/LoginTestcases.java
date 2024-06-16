@@ -15,22 +15,34 @@ import pages.newAccount;
 public class LoginTestcases extends baseclass{
 	
 	 
-	@Test(priority=1 , enabled=false)
-	public void TC_Login_and_Logout() throws Exception {
-		String userid = "mngr571354";
-		String password = "rupumej";
-		loginPage login = new loginPage(driver);
-		commonMethods cm = new commonMethods(driver);
-		
-		
-		login.enterUserID_and_password(userid,password);
-		login.clickLoginButton();
-		login.validateGTPLBANKlogo();
-		login.clickLogoutButton();
-	}
+	@Test(priority = 1, enabled = true)
+    public void TC_Login_and_Logout() throws Exception {
+        test = reports.startTest("TC_Login_and_Logout");
+        String userid = "mngr571354";
+        String password = "rupumej";
+        loginPage login = new loginPage(driver);
+        commonMethods cm = new commonMethods(driver);
+
+        try {
+            login.enterUserID_and_password(userid, password);
+            logInfo(test,"userId passoword entered", "userName_password");
+            login.clickLoginButton();
+//            logInfo(test, "Login successfully", "login_successfully");
+            logInfo(test,"userId passoword entered", "userName_password");
+            login.validateGTPLBANKlogo();
+            login.clickLogoutButton();
+            test.log(LogStatus.PASS, "TC_Login_and_Logout passed");
+        } catch (Exception e) {
+            test.log(LogStatus.FAIL, "TC_Login_and_Logout failed");
+            test.log(LogStatus.FAIL, test.addScreenCapture(takeScreenShot("failStep")));
+        } finally {
+            reports.endTest(test);
+        }
+    }
 	
 	@Test(priority=2 , enabled=true)
 	public void TC_Add_New_Customer() throws Exception {
+		test = reports.startTest("TC_Add_New_Customer");
 		
 		   JSONObject testData = jsonReader.getTestData("TC_Add_New_Customer");
 		
@@ -51,37 +63,41 @@ public class LoginTestcases extends baseclass{
 		
 		
 		login.enterUserID_and_password(username,password);
-		logInfo("userId passoword entered", "userName_password");
+		logInfo(test,"userId passoword entered", "userName_password");
 		login.clickLoginButton();
-		logInfo("login sucessfully", "login sucessfully");
+		logInfo(test,"login sucessfully", "login sucessfully");
 		nc.clickAddCustomer();
-		logInfo("addNewCustomerForm", "addNewCustomerForm");
+		logInfo(test,"addNewCustomerForm", "addNewCustomerForm");
 		nc.addCustomerDetails(testData);
 		nc.enterDOB("15", "08", "2000");
 		nc.enterEmail(emailAddress);
 		nc.enterPasswordCustomer(password);
 		
 		
-		logInfo("newCustomerDetailsEntered", "newCustomerDetailsEntered");
+		logInfo(test,"newCustomerDetailsEntered", "newCustomerDetailsEntered");
 		nc.submitCustomerDetails();
-		logInfo("CustomerID", "CustomerID");
+		logInfo(test,"CustomerID", "CustomerID");
 		String customerID = nc.getCustomerID();
-		logInfo("CustomerID is: "+customerID, "CustomerID");
+		logInfo(test,"CustomerID is: "+customerID, "CustomerID");
 		
 		newacc.clickNewAccount();
-		logInfo("createAccount", "createAccount");
+		logInfo(test,"createAccount", "createAccount");
 		newacc.validateAddNewAccFormText();
 		newacc.enterCustomerID(customerID);
 		newacc.enterInitialDepositAmount(initialDeposit);
 		newacc.clickSubmitButton_newAccCreation();
-		logInfo("AccountID", "AccountID");
+		logInfo(test,"AccountID", "AccountID");
 		String accountID = newacc.getAccountNumber();
-		logInfo("AccountID is: "+accountID, "AccountID");
+		logInfo(test,"AccountID is: "+accountID, "AccountID");
 		newacc.validateCustomerid(customerID);
+		 test.log(LogStatus.PASS, "TC_Add_New_Customer passed");
 		
 	}catch (Exception e) {
 		 test.log(LogStatus.FAIL, "TC_Add_New_Customer_Failure");
 		 test.log(LogStatus.FAIL,test.addScreenCapture(takeScreenShot("failStep")));
+	}
+	finally {
+		reports.endTest(test);
 	}
 		
 		
